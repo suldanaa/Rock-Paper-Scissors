@@ -35,8 +35,8 @@ function playGame(){
 
     function playRound(humanChoice, computerChoice){
 
-        if(humanScore < 5 && computerScore < 5){
-            
+        if(humanScore != 5 && computerScore != 5){
+
             if(document.body.contains(winMsg)){
                 document.body.removeChild(winMsg);
             }
