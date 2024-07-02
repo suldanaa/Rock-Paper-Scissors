@@ -36,6 +36,13 @@ function playGame(){
     function playRound(humanChoice, computerChoice){
 
         if(humanScore < 5 && computerScore < 5){
+            
+            if(document.body.contains(winMsg)){
+                document.body.removeChild(winMsg);
+            }
+            else if(document.body.contains(loseMsg)){
+                document.body.removeChild(loseMsg);
+            }
 
             if(humanChoice.toLowerCase()=="scissors"){
                 if(computerChoice.toLowerCase()=="paper"){
@@ -121,8 +128,8 @@ function playGame(){
             }
             if(humanScore == 5 || computerScore == 5){
                 whoWon(humanScore, computerScore);
-                humanScore =0;
-                computerScore =0;
+                humanScore=0;
+                computerScore=0;
             }
         }
 }
